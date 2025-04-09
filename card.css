@@ -4,19 +4,18 @@ body {
     margin: 0;
     padding: 20px;
 }
-.header {
+.header { 
 text-align: center;
 }
 
 .card-containers {
     display: grid;
-    grid-template-columns: repeat(3,1fr);  /*3 equal columns*/
-    grid-template-rows: auto;
-    row-gap: 10px;
-    column-gap: 5px;
+    grid-template-columns: repeat(3,0fr);  /*3 equal columns*/
+    grid-template-rows: repeat( 1fr);
+    gap: 10px;
 }
 
-.card1{
+.card-one{
     background-color: white;
     border-top: 4px solid #7cb7df ;
     border-radius: 8px;
@@ -25,11 +24,9 @@ text-align: center;
     box-sizing: border-box;
         height: 200px;
         width: 300px;
-        /* display: grid
-    ; */
         align-self: center;
 }
-.card2{
+.card-two{
     background-color: white;
     border-top: 4px solid #b80202 ;
     border-radius: 8px;
@@ -38,12 +35,9 @@ text-align: center;
     box-sizing: border-box;
         height: 200px;
         width: 300px;
-        /* display: grid
-    ; */
         align-self: center;
-
 }
-.card3{
+.card-three{
     background-color: white;
     border-top: 4px solid #f5f105 ;
     border-radius: 8px;
@@ -52,12 +46,10 @@ text-align: center;
     box-sizing: border-box;
         height: 200px;
         width: 300px;
-        /* display: grid
-    ; */
         align-self: center;
 
 }
-.card4{
+.card-four{
     background-color: white;
     border-top: 4px solid #05219b ;
     border-radius: 8px;
@@ -67,8 +59,6 @@ text-align: center;
     box-sizing: border-box;
         height: 200px;
         width: 300px;
-        /* display: grid
-    ; */
         align-self: center;
 
 }
@@ -82,19 +72,62 @@ text-align: center;
 }
 
 /*positioning */
-.card1 {
+.card-one {
     grid-column: 1;
     grid-row:1 ;
     }
-    .card2 {
+    .card-two {
     grid-column: 2;
     grid-row:1 ;
     }
-    .card3 {
+    .card-three {
         grid-column:2 ;
         grid-row: 2;
     }
-    .card4 {
+    .card-four {
     grid-column: 3;
     grid-row: 1;
+    }
+
+.cards2-3 {
+        grid-column: 2;
+        grid-row: 1;
+        width: 350px;
+        }
+
+    .card-one{
+        margin-top: 150px;
+    }   
+    .card-two{
+        margin-top: 30px;
+    }
+    .card-four{
+        grid-column:3 ;
+        grid-row: 1;
+        margin-top: 150px;
+    }
+
+
+@media (max-width:375px){
+    .card-containers {
+        grid-template-columns: 1fr; /*stack items in a single column on smaller screens*/
+    }
+
+    .card-one {
+        grid-column:1 ;
+        grid-row: 1;
+    }
+    .card-two {
+    grid-column: 1;
+    grid-row: 2;
+    } 
+    .card-three {
+        grid-column:1;
+        grid-row: 3 ;
+    }
+    .card-four {
+    grid-column: 1;
+    grid-row: 4;
+}
+
     }
